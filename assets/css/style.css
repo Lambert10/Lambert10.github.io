@@ -1,0 +1,186 @@
+.flip-card {
+  background-color: transparent;
+  perspective: 1000px;
+  height: 300px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.flip-card-front {
+  background-color: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flip-card-back {
+  background-color: #ffffff;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  background: linear-gradient(135deg, #05005b2f, #d500004d);
+}
+
+.flip-card-back img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  padding: 10px;
+}
+
+/*Codigo con diseño card frontal movil*/
+
+.flip-card-front {
+  background: linear-gradient(135deg, #00172e, #51000078);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+  position: absolute;
+  overflow: hidden;
+  color: white;
+}
+
+/* Figuras móviles: líneas diagonales */
+.flip-card-front::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  animation: linesMove 10s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 30% 50%;
+  }
+  50% {
+    background-position: 200% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes linesMove {
+  0% {
+    transform: rotate(0deg) translate(5, 0);
+  }
+  100% {
+    transform: rotate(180deg) translate(0, 0);
+  }
+}
+
+#nombre {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+.bg-primary {
+    background-color: #002D5B !important;
+}
+
+.btn-primary {
+    background-color: #002D5B !important;
+}
+
+
+.accordion-button {
+  background-color: #0d1d5a;
+  color: white;
+  font-weight: bold;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #0481ff;
+}
+
+.accordion-body {
+  background-color: #f9f9f9;
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-in-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+.glow-card {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+/* Glowing blue border (sutil y elegante) */
+.glow-card::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, #002d5b, #0057a0, #0099ff);
+  background-size: 200% 200%;
+  animation: glow-border-blue 6s ease infinite;
+  z-index: -1;
+  border-radius: inherit;
+  filter: blur(4px);
+  opacity: 0.7;
+}
+
+@keyframes glow-border-blue {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Fondo de la card para contraste */
+.glow-card .card-body {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(4px);
+  border-radius: inherit;
+}
+
+.accordion-button::after {
+  filter: brightness(0) invert(1); /* cambia el ícono a blanco */
+}
