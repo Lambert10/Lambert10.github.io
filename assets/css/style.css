@@ -16,6 +16,10 @@
   transform: rotateY(180deg);
 }
 
+.flip-card-inner.flipped {
+  transform: rotateY(180deg);
+}
+
 .flip-card-front, .flip-card-back {
   position: absolute;
   width: 100%;
@@ -49,6 +53,7 @@
   max-height: 100%;
   object-fit: contain;
   padding: 10px;
+  transition: transform 0.25s ease;
 }
 
 /*Codigo con diseno card frontal movil*/
@@ -64,6 +69,50 @@
   overflow: hidden;
   color: white;
   isolation: isolate;
+}
+
+.flip-card-front h5 {
+  margin: 0;
+  padding: 0 1rem;
+  font-size: clamp(1.4rem, 1.12rem + 0.9vw, 2rem);
+  font-weight: 700;
+  line-height: 1.2;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.32);
+}
+
+.flip-card:hover .flip-card-front h5,
+.flip-card:focus-within .flip-card-front h5 {
+  font-size: clamp(1.55rem, 1.2rem + 1.1vw, 2.2rem);
+}
+
+.flip-card-back::before {
+  content: attr(data-cert-title);
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  padding: 0.4rem 0.7rem;
+  border-radius: 0.6rem;
+  background: rgba(14, 18, 34, 0.72);
+  color: #fff;
+  font-size: clamp(1.05rem, 0.95rem + 0.55vw, 1.45rem);
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 2;
+}
+
+.flip-card-inner.flipped .flip-card-back::before {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.flip-card-inner.flipped .flip-card-back img {
+  transform: scale(0.92);
 }
 
 .flip-card-front::before,

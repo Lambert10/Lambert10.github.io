@@ -53,3 +53,31 @@ const animatedElements = document.querySelectorAll('.animate-on-scroll');
   });
 
   animatedElements.forEach(el => scrollObserver.observe(el));
+
+const certificationCards = document.querySelectorAll('#certifications .flip-card');
+
+certificationCards.forEach(card => {
+  const frontTitle = card.querySelector('.flip-card-front h5');
+  const backFace = card.querySelector('.flip-card-back');
+
+  if (!frontTitle || !backFace) {
+    return;
+  }
+
+  backFace.setAttribute('data-cert-title', frontTitle.textContent.trim());
+});
+
+const certificationColumns = document.querySelectorAll('#certifications .col');
+
+certificationColumns.forEach(col => {
+  if (col.hasAttribute('onclick')) {
+    return;
+  }
+
+  col.addEventListener('click', () => {
+    const cardInner = col.querySelector('.flip-card-inner');
+    if (cardInner) {
+      cardInner.classList.toggle('flipped');
+    }
+  });
+});
