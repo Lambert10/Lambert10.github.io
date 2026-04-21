@@ -224,6 +224,12 @@
     background-color: #002D5B !important;
 }
 
+.project-card .project-preview {
+  height: 240px;
+  object-fit: cover;
+  object-position: top;
+}
+
 
 .accordion-button {
   background-color: #0d1d5a;

@@ -60,56 +60,56 @@
 
     <!-- Proyecto 1 -->
     <div class="col">
-      <div class="card h-100 shadow-sm">
-        <img src="./assets/imgs/Dashboard.jpeg" class="card-img-top" alt="Dashboard Abastible">
+      <div class="card h-100 shadow-sm project-card">
+        <img src="./assets/imgs/Dashboard.jpeg" data-fallback-src="./assets/imgs/Dashboard.jpeg" class="card-img-top project-preview" alt="Dashboard Abastible">
         <div class="card-body">
           <h5 class="card-title">Dashboard Abastible</h5>
           <p class="card-text">Dashboard de análisis y seguimiento de indicadores para gestión comercial y operativa.</p>
         </div>
         <div class="card-footer text-center">
-          <a href="https://dashboardabastible.netlify.app/" target="_blank" class="btn btn-outline-primary">Ver proyecto</a>
+          <a href="https://dashboardabastible.netlify.app/" target="_blank" class="btn btn-outline-primary project-link">Ver proyecto</a>
         </div>
       </div>
     </div>
 
     <!-- Proyecto 2 -->
     <div class="col">
-      <div class="card h-100 shadow-sm">
-        <img src="./assets/imgs/paginawebenredchile.png" class="card-img-top" alt="Portal Enred Consultores">
+      <div class="card h-100 shadow-sm project-card">
+        <img src="./assets/imgs/paginawebenredchile.png" data-fallback-src="./assets/imgs/paginawebenredchile.png" class="card-img-top project-preview" alt="Portal Enred Consultores">
         <div class="card-body">
           <h5 class="card-title">Portal Enred Consultores</h5>
           <p class="card-text">Sitio profesional con enfoque en consultoría y presentación de servicios para clientes.</p>
         </div>
         <div class="card-footer text-center">
-          <a href="https://portalenredconsultores.netlify.app/" target="_blank" class="btn btn-outline-primary">Ver proyecto</a>
+          <a href="https://portalenredconsultores.netlify.app/" target="_blank" class="btn btn-outline-primary project-link">Ver proyecto</a>
         </div>
       </div>
     </div>
 
     <!-- Proyecto 3 -->
     <div class="col">
-      <div class="card h-100 shadow-sm">
-        <img src="./assets/imgs/PantallazoGenialTrip.png" class="card-img-top" alt="Dashboard Andes Motors">
+      <div class="card h-100 shadow-sm project-card">
+        <img src="./assets/imgs/PantallazoGenialTrip.png" data-fallback-src="./assets/imgs/PantallazoGenialTrip.png" class="card-img-top project-preview" alt="Dashboard Andes Motors">
         <div class="card-body">
           <h5 class="card-title">Dashboard Andes Motors</h5>
           <p class="card-text">Plataforma de visualización para control de datos, métricas y rendimiento de operaciones.</p>
         </div>
         <div class="card-footer text-center">
-          <a href="https://dashboardandesmotors.netlify.app/" target="_blank" class="btn btn-outline-primary">Ver proyecto</a>
+          <a href="https://dashboardandesmotors.netlify.app/" target="_blank" class="btn btn-outline-primary project-link">Ver proyecto</a>
         </div>
       </div>
     </div>
 
     <!-- Proyecto 4 -->
     <div class="col">
-      <div class="card h-100 shadow-sm">
-        <img src="./assets/imgs/paginawebenredchile.png" class="card-img-top" alt="Sitio Enred Chile">
+      <div class="card h-100 shadow-sm project-card">
+        <img src="./assets/imgs/paginawebenredchile.png" data-fallback-src="./assets/imgs/paginawebenredchile.png" class="card-img-top project-preview" alt="Sitio Enred Chile">
         <div class="card-body">
           <h5 class="card-title">Enred Chile</h5>
           <p class="card-text">Sitio institucional con informacion de servicios, contacto comercial y presencia digital de marca.</p>
         </div>
         <div class="card-footer text-center">
-          <a href="https://www.enredchile.cl/" target="_blank" class="btn btn-outline-primary">Ver proyecto</a>
+          <a href="https://www.enredchile.cl/" target="_blank" class="btn btn-outline-primary project-link">Ver proyecto</a>
         </div>
       </div>
     </div>
@@ -117,7 +117,35 @@
   </div>
 </section>
 
+  <script>
+    (function () {
+      const previewBaseUrl = "https://image.thum.io/get/width/1200/noanimate/";
+      const projectCards = document.querySelectorAll("#portafolio .project-card");
 
-    
+      projectCards.forEach((card) => {
+        const previewImage = card.querySelector(".project-preview");
+        const projectLink = card.querySelector(".project-link");
+
+        if (!previewImage || !projectLink) return;
+
+        previewImage.loading = "lazy";
+        previewImage.decoding = "async";
+        previewImage.referrerPolicy = "no-referrer";
+
+        previewImage.addEventListener(
+          "error",
+          () => {
+            const fallbackSrc = previewImage.dataset.fallbackSrc;
+            if (fallbackSrc) {
+              previewImage.src = fallbackSrc;
+            }
+          },
+          { once: true }
+        );
+
+        previewImage.src = `${previewBaseUrl}${projectLink.href}`;
+      });
+    })();
+  </script>
 </body>
 </html>
