@@ -1,121 +1,292 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV Ignacio Lambert</title>
-  <link rel="icon" type="image/png" href="./assets/imgs/favicon.png">
-
-  <!-- Bootstrap & Fonts -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portafolio de proyectos de Ignacio Andrés Lambert Ramírez: Business Intelligence, automatización, analítica y soluciones digitales." />
+  <title>Portafolio | Ignacio Andrés Lambert Ramírez</title>
+  <link rel="icon" type="image/png" href="./assets/imgs/favicon.png" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/style.css">
   <script src="https://kit.fontawesome.com/dca0f2a966.js" crossorigin="anonymous"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0b2d4d;
+      --secondary: #145c9e;
+      --accent: #00a6a6;
+      --soft: #f4f8fb;
+      --dark: #1f2933;
+      --muted: #5f6c7b;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--dark);
+      background: #ffffff;
+      line-height: 1.65;
+    }
+
+    .navbar {
+      background: rgba(11, 45, 77, 0.98);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero {
+      background:
+        radial-gradient(circle at top right, rgba(0, 166, 166, 0.18), transparent 32%),
+        linear-gradient(135deg, #0b2d4d 0%, #145c9e 100%);
+      color: #ffffff;
+      padding: 5rem 0 4rem;
+    }
+
+    .hero h1 {
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+
+    .hero .lead {
+      color: rgba(255, 255, 255, 0.86);
+      max-width: 780px;
+    }
+
+    .eyebrow {
+      color: #b8f3f3;
+      font-weight: 700;
+      letter-spacing: .12em;
+    }
+
+    .section-title {
+      color: var(--primary);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .project-card {
+      border: 1px solid #e5edf4;
+      border-radius: 1.25rem;
+      box-shadow: 0 16px 40px rgba(11, 45, 77, 0.08);
+      overflow: hidden;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 22px 50px rgba(11, 45, 77, 0.15);
+    }
+
+    .project-preview {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      object-position: top;
+      background: var(--soft);
+      border-bottom: 1px solid #e5edf4;
+    }
+
+    .project-card .card-body {
+      padding: 1.6rem;
+    }
+
+    .project-card .card-title {
+      color: var(--primary);
+      font-weight: 800;
+    }
+
+    .tag {
+      display: inline-block;
+      margin: .15rem;
+      padding: .3rem .65rem;
+      border-radius: 999px;
+      background: #eaf6f6;
+      color: #056565;
+      font-size: .8rem;
+      font-weight: 700;
+    }
+
+    .btn-main {
+      color: #ffffff;
+      background: var(--accent);
+      border: 0;
+      font-weight: 700;
+    }
+
+    .btn-main:hover,
+    .btn-main:focus {
+      color: #ffffff;
+      background: #008f8f;
+    }
+
+    .btn-project {
+      color: var(--secondary);
+      border-color: var(--secondary);
+      font-weight: 700;
+    }
+
+    .btn-project:hover,
+    .btn-project:focus {
+      color: #ffffff;
+      background: var(--secondary);
+      border-color: var(--secondary);
+    }
+
+    .contact-card {
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border: 0;
+      border-radius: 1.25rem;
+      box-shadow: 0 16px 40px rgba(11, 45, 77, 0.16);
+    }
+
+    footer {
+      color: #ffffff;
+      background: var(--primary);
+    }
+
+    @media (max-width: 575.98px) {
+      .hero {
+        padding: 4rem 0 3rem;
+      }
+
+      .project-preview {
+        height: 200px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg py-4 navbar-dark bg-primary">
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">
-      <a id="nombre" class="navbar-brand" href="#">Ignacio Andrés Lambert Ramírez</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <a class="navbar-brand fw-bold" href="./index.html">Ignacio Lambert</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir navegación">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="./index.html#personal">Datos Personales</a></li>
-          <li class="nav-item"><a class="nav-link" href="./index.html#profile">Perfil Profesional</a></li>
-          <li class="nav-item"><a class="nav-link" href="./index.html#education">Formación</a></li>
-          <li class="nav-item"><a class="nav-link" href="./index.html#experience">Experiencia</a></li>
-          <li class="nav-item"><a class="nav-link" href="./index.html#certifications">Certificaciones</a></li>
+          <li class="nav-item"><a class="nav-link" href="./index.html#perfil">Perfil</a></li>
+          <li class="nav-item"><a class="nav-link" href="./index.html#experiencia">Experiencia</a></li>
           <li class="nav-item"><a class="nav-link" href="./index.html#habilidades">Habilidades</a></li>
-          <li class="nav-item"><a class="nav-link active" href="./portafolio.html" aria-current="page">Portafolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="./index.html#formacion">Formación</a></li>
+          <li class="nav-item"><a class="nav-link" href="./index.html#certificaciones">Certificaciones</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#portafolio" aria-current="page">Portafolio</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <header class="text-center py-4">
-    <img src="./assets/imgs/FOTO_DE_PERFIL.jpg" class="rounded-circle border border-secondary" width="120" alt="Foto de perfil">
-    <h1 class="mt-3">Ignacio Andrés Lambert Ramírez</h1>
-    <h2 class="text-muted">Software Builder | Data, Automation & AI Solutions</h2>
-    <h4 class="text-muted">Consultor en soluciones digitales, automatización, analítica e IA</h4>
-            <div>
-                <a href="https://www.linkedin.com/in/ignacio-andr%C3%A9s-lambert-b0a96773/" target="_blank"class="btn btn-primary shadow lift me-1">
-                <i class="fa-brands fa-linkedin-in"></i> Linkedin
-                </a>
-                <a href="https://github.com/Lambert10" target="_blank" class="btn btn-primary shadow lift me-1">
-                <i class="fa-brands fa-github"></i></i> Github
-                </a>
-                <a href="https://www.instagram.com/ignacio_lambert10?igsh=eGIzcXVvdTVjbjdn&utm_source=qr" target="_blank" class="btn btn-primary shadow lift me-1">
-                <i class="fa-brands fa-instagram"></i> Instagram
-                </a>
-            </div>
+  <header class="hero">
+    <div class="container">
+      <p class="eyebrow text-uppercase mb-2">Proyectos seleccionados</p>
+      <h1 class="display-4 mb-3">Portafolio de soluciones digitales</h1>
+      <p class="lead fs-4 mb-4">
+        Proyectos que conectan negocio, datos y tecnología para mejorar la gestión, automatizar procesos y convertir información en decisiones accionables.
+      </p>
+      <div class="d-flex flex-wrap gap-2">
+        <a href="#portafolio" class="btn btn-main btn-lg"><i class="fa-solid fa-folder-open me-2"></i>Ver proyectos</a>
+        <a href="./index.html" class="btn btn-outline-light btn-lg"><i class="fa-solid fa-arrow-left me-2"></i>Volver al CV</a>
+      </div>
+    </div>
   </header>
 
-  <section id="portafolio" class="container py-5">
-  <h2 class="text-center mb-4">Proyectos Destacados</h2>
-  <div class="row row-cols-1 row-cols-md-3 g-4">
+  <main>
+    <section id="portafolio" class="container py-5">
+      <div class="text-center mx-auto mb-5" style="max-width: 760px;">
+        <h2 class="section-title mb-3">Proyectos destacados</h2>
+        <p class="muted mb-0">Una selección de dashboards, portales y experiencias web desarrolladas para apoyar operaciones, análisis y presencia digital.</p>
+      </div>
 
-    <!-- Proyecto 1 -->
-    <div class="col">
-      <div class="card h-100 shadow-sm project-card">
-        <img src="./assets/imgs/DashboardAbastible.png" class="card-img-top project-preview" alt="Dashboard Abastible">
-        <div class="card-body">
-          <h5 class="card-title">Dashboard Abastible</h5>
-          <p class="card-text">Dashboard de análisis y seguimiento de indicadores para gestión comercial y operativa.</p>
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+          <article class="card project-card h-100">
+            <img src="./assets/imgs/DashboardAbastible.png" class="card-img-top project-preview" alt="Vista previa del Dashboard Abastible">
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title h4">Dashboard Abastible</h3>
+              <p class="card-text muted">Dashboard de análisis y seguimiento de indicadores para la gestión comercial y operativa.</p>
+              <div class="mb-4">
+                <span class="tag">Business Intelligence</span>
+                <span class="tag">Dashboard</span>
+                <span class="tag">KPI</span>
+              </div>
+              <a href="https://dashboardabastible.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-project mt-auto align-self-start">Ver proyecto <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i></a>
+            </div>
+          </article>
         </div>
-        <div class="card-footer text-center">
-          <a href="https://dashboardabastible.netlify.app/" target="_blank" class="btn btn-outline-primary project-link">Ver proyecto</a>
+
+        <div class="col">
+          <article class="card project-card h-100">
+            <img src="./assets/imgs/PortalEnredConsultores.png" class="card-img-top project-preview" alt="Vista previa del Portal Enred Consultores">
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title h4">Portal Enred Consultores</h3>
+              <p class="card-text muted">Sitio profesional enfocado en consultoría, presentación de servicios y experiencia de clientes.</p>
+              <div class="mb-4">
+                <span class="tag">Portal web</span>
+                <span class="tag">Consultoría</span>
+                <span class="tag">UX</span>
+              </div>
+              <a href="https://portalenredconsultores.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-project mt-auto align-self-start">Ver proyecto <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col">
+          <article class="card project-card h-100">
+            <img src="./assets/imgs/DashboardAndesMotors.png" class="card-img-top project-preview" alt="Vista previa del Dashboard Andes Motors">
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title h4">Dashboard Andes Motors</h3>
+              <p class="card-text muted">Plataforma de visualización para el control de datos, métricas y rendimiento de operaciones.</p>
+              <div class="mb-4">
+                <span class="tag">Data &amp; BI</span>
+                <span class="tag">Operaciones</span>
+                <span class="tag">Analítica</span>
+              </div>
+              <a href="https://dashboardandesmotors.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-project mt-auto align-self-start">Ver proyecto <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col">
+          <article class="card project-card h-100">
+            <img src="./assets/imgs/paginawebenredchile.png" class="card-img-top project-preview" alt="Vista previa del sitio Enred Chile">
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title h4">Enred Chile</h3>
+              <p class="card-text muted">Sitio institucional con información de servicios, contacto comercial y presencia digital de marca.</p>
+              <div class="mb-4">
+                <span class="tag">Sitio institucional</span>
+                <span class="tag">Servicios</span>
+                <span class="tag">Marca digital</span>
+              </div>
+              <a href="https://www.enredchile.cl/" target="_blank" rel="noopener noreferrer" class="btn btn-project mt-auto align-self-start">Ver proyecto <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i></a>
+            </div>
+          </article>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Proyecto 2 -->
-    <div class="col">
-      <div class="card h-100 shadow-sm project-card">
-        <img src="./assets/imgs/PortalEnredConsultores.png" class="card-img-top project-preview" alt="Portal Enred Consultores">
-        <div class="card-body">
-          <h5 class="card-title">Portal Enred Consultores</h5>
-          <p class="card-text">Sitio profesional con enfoque en consultoría y presentación de servicios para clientes.</p>
-        </div>
-        <div class="card-footer text-center">
-          <a href="https://portalenredconsultores.netlify.app/" target="_blank" class="btn btn-outline-primary project-link">Ver proyecto</a>
+    <section class="container pb-5">
+      <div class="card contact-card">
+        <div class="card-body p-4 p-lg-5 text-center">
+          <h2 class="fw-bold mb-3">¿Tienes un desafío de negocio o datos?</h2>
+          <p class="lead mb-4">Conversemos sobre cómo convertirlo en una solución digital clara, medible y útil.</p>
+          <a href="mailto:ignacio.rlambert@gmail.com" class="btn btn-main btn-lg"><i class="fa-solid fa-envelope me-2"></i>Contactar</a>
         </div>
       </div>
+    </section>
+  </main>
+
+  <footer class="text-center py-4">
+    <div class="container">
+      <p class="mb-1">&copy; 2026 Ignacio Andrés Lambert Ramírez</p>
+      <p class="small mb-0">Consultoría | Data &amp; BI | Transformación Digital | Automatización</p>
     </div>
+  </footer>
 
-    <!-- Proyecto 3 -->
-    <div class="col">
-      <div class="card h-100 shadow-sm project-card">
-        <img src="./assets/imgs/DashboardAndesMotors.png" class="card-img-top project-preview" alt="Dashboard Andes Motors">
-        <div class="card-body">
-          <h5 class="card-title">Dashboard Andes Motor</h5>
-          <p class="card-text">Plataforma de visualización para control de datos, métricas y rendimiento de operaciones.</p>
-        </div>
-        <div class="card-footer text-center">
-          <a href="https://dashboardandesmotors.netlify.app/" target="_blank" class="btn btn-outline-primary project-link">Ver proyecto</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Proyecto 4 -->
-    <div class="col">
-      <div class="card h-100 shadow-sm project-card">
-        <img src="./assets/imgs/paginawebenredchile.png" class="card-img-top project-preview" alt="Sitio Enred Chile">
-        <div class="card-body">
-          <h5 class="card-title">Enred Chile</h5>
-          <p class="card-text">Sitio institucional con informacion de servicios, contacto comercial y presencia digital de marca.</p>
-        </div>
-        <div class="card-footer text-center">
-          <a href="https://www.enredchile.cl/" target="_blank" class="btn btn-outline-primary project-link">Ver proyecto</a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
