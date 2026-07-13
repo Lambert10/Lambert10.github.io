@@ -1,605 +1,508 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV Ignacio Lambert</title>
-  <link rel="icon" type="image/png" href="./assets/imgs/favicon.png">
-
-  <!-- Bootstrap & Fonts -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CV online de Ignacio Andrés Lambert Ramírez: Consultor de Proyectos, Transformación Digital, Data & BI, Automatización, SAP, Power BI, SQL y Python." />
+  <title>Ignacio Andrés Lambert Ramírez | Consultor de Proyectos, Data & BI</title>
+  <link rel="icon" type="image/png" href="./assets/imgs/favicon.png" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/style.css">
   <script src="https://kit.fontawesome.com/dca0f2a966.js" crossorigin="anonymous"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0b2d4d;
+      --secondary: #145c9e;
+      --accent: #00a6a6;
+      --soft: #f4f8fb;
+      --dark: #1f2933;
+      --muted: #5f6c7b;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--dark);
+      background: #ffffff;
+      line-height: 1.65;
+    }
+
+    .navbar {
+      background: rgba(11, 45, 77, 0.98);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero {
+      background:
+        radial-gradient(circle at top right, rgba(0, 166, 166, 0.16), transparent 30%),
+        linear-gradient(135deg, #0b2d4d 0%, #145c9e 100%);
+      color: #ffffff;
+      padding: 5rem 0 4rem;
+    }
+
+    .hero h1 {
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+
+    .hero .lead {
+      color: rgba(255, 255, 255, 0.86);
+      max-width: 920px;
+    }
+
+    .profile-photo {
+      width: 128px;
+      height: 128px;
+      object-fit: cover;
+      border: 4px solid rgba(255,255,255,0.75);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.25);
+    }
+
+    .badge-skill {
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      color: #ffffff;
+      padding: .45rem .75rem;
+      border-radius: 999px;
+      font-weight: 600;
+      display: inline-block;
+      margin: .22rem;
+    }
+
+    .section-title {
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: -0.02em;
+    }
+
+    .card-clean {
+      border: 1px solid #e5edf4;
+      border-radius: 1.25rem;
+      box-shadow: 0 16px 40px rgba(11, 45, 77, 0.08);
+    }
+
+    .role-card {
+      border-left: 5px solid var(--secondary);
+    }
+
+    .tag {
+      display: inline-block;
+      background: #eaf6f6;
+      color: #056565;
+      font-weight: 700;
+      font-size: .83rem;
+      padding: .3rem .65rem;
+      border-radius: 999px;
+      margin: .15rem;
+    }
+
+    .timeline-date {
+      color: var(--secondary);
+      font-weight: 700;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .highlight-box {
+      background: var(--soft);
+      border-radius: 1rem;
+      padding: 1.25rem;
+      height: 100%;
+    }
+
+    .btn-main {
+      background: var(--accent);
+      border: 0;
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    .btn-main:hover {
+      background: #008f8f;
+      color: #ffffff;
+    }
+
+    a {
+      color: var(--secondary);
+    }
+
+    footer {
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    @media print {
+      .navbar, .btn, footer { display: none !important; }
+      .hero { background: #ffffff !important; color: #000000 !important; padding: 1rem 0; }
+      .hero .lead, .badge-skill { color: #000000 !important; }
+      .badge-skill { border: 1px solid #ccc; background: #fff; }
+      .card-clean { box-shadow: none; border: 1px solid #ccc; }
+    }
+  </style>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg py-4 navbar-dark bg-primary">
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">
-      <a id="nombre" class="navbar-brand" href="#">Ignacio Andrés Lambert Ramírez</a>
+      <a class="navbar-brand fw-bold" href="#">Ignacio Lambert</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="#personal">Datos Personales</a></li>
-          <li class="nav-item"><a class="nav-link active" href="#profile">Perfil Profesional</a></li>
-          <li class="nav-item"><a class="nav-link active" href="#education">Formación</a></li>
-          <li class="nav-item"><a class="nav-link active" href="#experience">Experiencia</a></li>
-          <li class="nav-item"><a class="nav-link active" href="#certifications">Certificaciones</a></li>
-          <li class="nav-item"><a class="nav-link active" href="#habilidades">Habilidades</a></li>
-          <li class="nav-item"><a class="nav-link active" href="./portafolio.html" target="_blank">Portafolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#perfil">Perfil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experiencia">Experiencia</a></li>
+          <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
+          <li class="nav-item"><a class="nav-link" href="#formacion">Formación</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certificaciones">Certificaciones</a></li>
+          <li class="nav-item"><a class="nav-link" href="./portafolio.html" target="_blank">Portafolio</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <header class="text-center py-4">
-    <img src="./assets/imgs/FOTO_DE_PERFIL.png" class="rounded-circle border border-secondary" width="120" alt="Foto de perfil">
-    <h1 class="mt-3">Ignacio Andrés Lambert Ramírez</h1>
-    <h2 class="text-muted">Software Builder | Data, Automation & AI Solutions</h2>
-    <h4 class="text-muted">Consultor en soluciones digitales, automatización, analítica e IA</h4>
-            <div>
-                <a href="https://www.linkedin.com/in/ignacio-andr%C3%A9s-lambert-b0a96773/" target="_blank"class="btn btn-primary shadow lift me-1">
-                <i class="fa-brands fa-linkedin-in"></i> Linkedin
-                </a>
-                <a href="https://github.com/Lambert10" target="_blank" class="btn btn-primary shadow lift me-1">
-                <i class="fa-brands fa-github"></i></i> Github
-                </a>
-                <a href="https://www.instagram.com/ignacio_lambert10?igsh=eGIzcXVvdTVjbjdn&utm_source=qr" target="_blank" class="btn btn-primary shadow lift me-1">
-                <i class="fa-brands fa-instagram"></i> Instagram
-                </a>
-            </div>
+  <header class="hero">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-2 text-center text-lg-start">
+          <img src="./assets/imgs/FOTO_DE_PERFIL.png" class="rounded-circle profile-photo" alt="Foto de perfil de Ignacio Lambert">
+        </div>
+        <div class="col-lg-10">
+          <p class="text-uppercase fw-bold mb-2" style="letter-spacing:.12em; color:#b8f3f3;">Consultor de Proyectos | Transformación Digital | Data & BI</p>
+          <h1 class="display-5 mb-3">Ignacio Andrés Lambert Ramírez</h1>
+          <p class="lead fs-4 mb-3">
+            Ingeniero Comercial que conecta negocio, procesos y tecnología para transformar problemas operacionales en soluciones digitales, reportes ejecutivos y planes accionables.
+          </p>
+          <div class="mb-4">
+            <span class="badge-skill">Gestión de proyectos</span>
+            <span class="badge-skill">Transformación digital</span>
+            <span class="badge-skill">Business Intelligence</span>
+            <span class="badge-skill">Power BI</span>
+            <span class="badge-skill">SQL</span>
+            <span class="badge-skill">Python</span>
+            <span class="badge-skill">SAP FI / PS / MM</span>
+            <span class="badge-skill">Automatización</span>
+          </div>
+          <div class="d-flex flex-wrap gap-2">
+            <a href="mailto:ignacio.rlambert@gmail.com" class="btn btn-main btn-lg"><i class="fa-solid fa-envelope"></i> Contactar</a>
+            <a href="https://www.linkedin.com/in/ignacio-andr%C3%A9s-lambert-b0a96773/" target="_blank" class="btn btn-outline-light btn-lg"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/Lambert10" target="_blank" class="btn btn-outline-light btn-lg"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="./portafolio.html" target="_blank" class="btn btn-outline-light btn-lg"><i class="fa-solid fa-folder-open"></i> Portafolio</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <main class="container">
-    <section id="personal" class="my-5 d-flex justify-content-center">
-      <div class="card shadow-lg border-0 animate-on-scroll glow-card" style="width: 100%; max-width: 1000px;">
-        <div class="card-body">
-          <h3 class="card-title text-center mb-4"> Datos Personales 📌</h3>
-          <ul class="list-unstyled ps-3">
-            <li><strong>Nombre:</strong> Ignacio Andrés Lambert Ramírez</li>
-            <li><strong>Email:</strong> ignacio.rlambert@gmail.com</li>
-            <li><strong>Teléfono:</strong> +56976231513</li>
-            <li><strong>Dirección:</strong> Alto Pinar 1200, Puente Alto, Chile</li>
-            <li><strong>Género:</strong> Hombre</li>
-            <li><strong>Nacionalidad:</strong> Chileno</li>
-          </ul>
+  <main>
+    <section id="perfil" class="container py-5">
+      <div class="row g-4">
+        <div class="col-lg-8">
+          <div class="card card-clean h-100">
+            <div class="card-body p-4 p-lg-5">
+              <h2 class="section-title mb-3">Perfil profesional</h2>
+              <p>
+                Profesional senior con más de 10 años de experiencia en consultoría, gestión de proyectos, transformación digital, control de gestión, Business Intelligence y soluciones tecnológicas. He trabajado en minería, banca, AFP, sector público y consultoría, articulando requerimientos de negocio, procesos, datos y equipos multidisciplinarios.
+              </p>
+              <p>
+                Mi posicionamiento principal es híbrido: <strong>negocio + datos + proyectos</strong>. Puedo levantar procesos, diagnosticar brechas, traducir necesidades del cliente en requerimientos funcionales, coordinar stakeholders, diseñar tableros de control y proponer mejoras con foco en eficiencia, experiencia de cliente y toma de decisiones.
+              </p>
+              <p class="mb-0">
+                Roles objetivo: <strong>Consultor de Proyectos</strong>, Project Manager, Business Analyst, BI Analyst, Data Analyst, Consultor de Transformación Digital, Consultor SAP/ERP y roles de automatización orientados a negocio.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card card-clean h-100">
+            <div class="card-body p-4">
+              <h3 class="section-title h4 mb-3">Datos de contacto</h3>
+              <p class="mb-2"><strong>Ubicación:</strong> Santiago, Chile</p>
+              <p class="mb-2"><strong>Email:</strong> <a href="mailto:ignacio.rlambert@gmail.com">ignacio.rlambert@gmail.com</a></p>
+              <p class="mb-2"><strong>Teléfono:</strong> <a href="tel:+56976231513">+56 9 7623 1513</a></p>
+              <p class="mb-0"><strong>Modalidad:</strong> Presencial, híbrido o remoto según proyecto</p>
+              <hr>
+              <p class="small muted mb-0">
+                Nota: se eliminan datos no necesarios para procesos de selección, como dirección exacta, género o información personal sensible.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="profile" class="my-5 d-flex justify-content-center">
-      <div class="card shadow-lg border-0 animate-on-scroll glow-card" style="width: 100%; max-width: 1000px;">
-        <div class="card-body">
-          <h3 class="card-title text-center mb-4">Perfil Profesional</h3>
-          <p>
-            Ingeniero Comercial de formación, consultor estrategico y software builder, con 10 años de experiencia liderando iniciativas de analitica, control de gestion y desarrollo de soluciones digitales de punta a punta. Perfil senior orientado a conectar negocio, datos y tecnologia para impulsar decisiones de alto impacto, mejorar la eficiencia operacional y acelerar resultados medibles. Experiencia en el uso de <strong>Python, SQL, Power BI</strong>, <strong>JavaScript y TypeScript</strong> para transformar informacion compleja en estrategia ejecutable y capacidades sostenibles para las organizaciones.
+    <section class="container pb-5">
+      <h2 class="section-title text-center mb-4">Propuesta de valor</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="highlight-box">
+            <h3 class="h5 fw-bold">1. Gestión y consultoría</h3>
+            <p class="mb-0">Levantamiento de procesos, diagnóstico de brechas, gestión de stakeholders, documentación funcional, seguimiento de hitos y presentaciones ejecutivas.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="highlight-box">
+            <h3 class="h5 fw-bold">2. Datos para decidir</h3>
+            <p class="mb-0">Power BI, SQL, Python, KPI, tableros ejecutivos, control de gestión, validación de información y generación de insights accionables.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="highlight-box">
+            <h3 class="h5 fw-bold">3. Transformación digital</h3>
+            <p class="mb-0">Automatización, digitalización de procesos, mejora continua, SAP/ERP, n8n, integración de herramientas y adopción de soluciones tecnológicas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experiencia" class="container py-5">
+      <h2 class="section-title text-center mb-4">Experiencia profesional</h2>
+
+      <article class="card card-clean role-card mb-4">
+        <div class="card-body p-4">
+          <div class="d-flex flex-column flex-md-row justify-content-between gap-2">
+            <div>
+              <h3 class="h4 fw-bold mb-1">Consultor de Proyectos | Transformación Digital | Data & BI</h3>
+              <p class="mb-1"><strong>Enred Chile / Enred Consultores</strong></p>
+            </div>
+            <p class="timeline-date mb-0">2025 – Presente</p>
+          </div>
+          <ul class="mt-3 mb-3">
+            <li>Impulso proyectos de transformación digital, diagnóstico organizacional, experiencia cliente, analítica y mejora de procesos para clientes de distintas industrias.</li>
+            <li>Realizo levantamiento de procesos, análisis de brechas, definición de KPI, reportería ejecutiva y documentación funcional para convertir problemas operacionales en planes de acción.</li>
+            <li>Desarrollo reportes y tableros con foco en toma de decisiones, seguimiento de indicadores, NPS/CSI, eficiencia operacional y gestión del cambio.</li>
+            <li>Coordino stakeholders, equipos internos y usuarios clave para asegurar claridad de requerimientos, avance de entregables y adopción de soluciones.</li>
+          </ul>
+          <div>
+            <span class="tag">Gestión de proyectos</span>
+            <span class="tag">Transformación digital</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">KPI</span>
+            <span class="tag">Stakeholders</span>
+            <span class="tag">Mejora de procesos</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card card-clean role-card mb-4">
+        <div class="card-body p-4">
+          <div class="d-flex flex-column flex-md-row justify-content-between gap-2">
+            <div>
+              <h3 class="h4 fw-bold mb-1">Analista en Control de Gestión | División de Finanzas</h3>
+              <p class="mb-1"><strong>Ministerio de Vivienda y Urbanismo — MINVU</strong></p>
+            </div>
+            <p class="timeline-date mb-0">2024 – 2025</p>
+          </div>
+          <ul class="mt-3 mb-3">
+            <li>Fortalecí la reportería y visibilidad de información financiera para apoyar decisiones de control de gestión.</li>
+            <li>Trabajé en extracción, validación, análisis y estandarización de datos financieros desde distintas fuentes.</li>
+            <li>Desarrollé tableros, informes e indicadores para seguimiento presupuestario, gestión financiera y análisis ejecutivo.</li>
+          </ul>
+          <div>
+            <span class="tag">Control de gestión</span>
+            <span class="tag">Finanzas</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Reportería ejecutiva</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card card-clean role-card mb-4">
+        <div class="card-body p-4">
+          <div class="d-flex flex-column flex-md-row justify-content-between gap-2">
+            <div>
+              <h3 class="h4 fw-bold mb-1">Especialista en Plataforma de Gestión de Personas | Proyectos Tecnológicos</h3>
+              <p class="mb-1"><strong>ProVida AFP / MetLife</strong></p>
+            </div>
+            <p class="timeline-date mb-0">2019 – 2023</p>
+          </div>
+          <ul class="mt-3 mb-3">
+            <li>Lideré el desarrollo e implementación de una plataforma de gestión de personas, desde el levantamiento de requerimientos hasta la coordinación con usuarios clave.</li>
+            <li>Digitalicé procesos internos asociados a gestión de personas, mejorando trazabilidad, acceso a información y seguimiento de solicitudes.</li>
+            <li>Coordiné requerimientos entre áreas de negocio y tecnología, asegurando priorización, validación funcional, pruebas, documentación y capacitación.</li>
+            <li>Generé reportes e indicadores para apoyar el seguimiento de procesos internos y la toma de decisiones.</li>
+          </ul>
+          <div>
+            <span class="tag">Gestión de personas</span>
+            <span class="tag">Plataformas digitales</span>
+            <span class="tag">Requerimientos</span>
+            <span class="tag">Usuarios clave</span>
+            <span class="tag">Reportería</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card card-clean role-card mb-4">
+        <div class="card-body p-4">
+          <div class="d-flex flex-column flex-md-row justify-content-between gap-2">
+            <div>
+              <h3 class="h4 fw-bold mb-1">Project Manager BI & Banking Solutions</h3>
+              <p class="mb-1"><strong>BancoEstado</strong></p>
+            </div>
+            <p class="timeline-date mb-0">2018 – 2019</p>
+          </div>
+          <ul class="mt-3 mb-3">
+            <li>Apoyé proyectos de implementación y estandarización de procesos para operación bancaria en la red ServiEstado.</li>
+            <li>Coordiné requerimientos funcionales, usuarios clave y equipos internos para facilitar adopción de procesos y soluciones.</li>
+            <li>Participé en iniciativas de reportería, seguimiento de indicadores, capacitación y soporte funcional.</li>
+          </ul>
+          <div>
+            <span class="tag">Project Management</span>
+            <span class="tag">Banca</span>
+            <span class="tag">BI</span>
+            <span class="tag">Procesos</span>
+            <span class="tag">Soporte funcional</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card card-clean role-card mb-4">
+        <div class="card-body p-4">
+          <div class="d-flex flex-column flex-md-row justify-content-between gap-2">
+            <div>
+              <h3 class="h4 fw-bold mb-1">Business Solutions Consultant — SAP</h3>
+              <p class="mb-1"><strong>MT Solution Center</strong></p>
+            </div>
+            <p class="timeline-date mb-0">2015 – 2017</p>
+          </div>
+          <ul class="mt-3 mb-3">
+            <li>Apoyé proyectos de optimización de procesos ERP y soluciones SAP para clientes.</li>
+            <li>Participé en levantamiento de requerimientos, análisis funcional, documentación, pruebas y soporte a usuarios.</li>
+            <li>Trabajé con procesos vinculados a SAP FI, SAP PS y SAP MM, además de coordinación de consultores especializados.</li>
+          </ul>
+          <div>
+            <span class="tag">SAP FI</span>
+            <span class="tag">SAP PS</span>
+            <span class="tag">SAP MM</span>
+            <span class="tag">ERP</span>
+            <span class="tag">Consultoría funcional</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section id="habilidades" class="container py-5">
+      <h2 class="section-title text-center mb-4">Habilidades clave</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-clean h-100"><div class="card-body p-4">
+            <h3 class="h5 fw-bold">Business Intelligence & Data</h3>
+            <p class="mb-0">Power BI, SQL, Python, dashboards, KPI, DAX, Power Query, Excel avanzado, análisis de datos, validación y modelamiento.</p>
+          </div></div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-clean h-100"><div class="card-body p-4">
+            <h3 class="h5 fw-bold">Gestión de proyectos</h3>
+            <p class="mb-0">Planificación, seguimiento de hitos, gestión de stakeholders, Scrum, documentación funcional, control de avances y reporting ejecutivo.</p>
+          </div></div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-clean h-100"><div class="card-body p-4">
+            <h3 class="h5 fw-bold">Transformación digital</h3>
+            <p class="mb-0">Levantamiento de procesos, diagnóstico de brechas, automatización, mejora continua, digitalización, n8n y gestión del cambio.</p>
+          </div></div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-clean h-100"><div class="card-body p-4">
+            <h3 class="h5 fw-bold">ERP & SAP</h3>
+            <p class="mb-0">SAP FI, SAP PS, SAP MM, procesos ERP, soporte funcional, pruebas, documentación, usuarios clave y optimización de procesos.</p>
+          </div></div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-clean h-100"><div class="card-body p-4">
+            <h3 class="h5 fw-bold">Tecnología y desarrollo</h3>
+            <p class="mb-0">JavaScript, React, Node.js, APIs REST, Git/GitHub, GCP, AWS, fundamentos de Machine Learning e IA aplicada.</p>
+          </div></div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-clean h-100"><div class="card-body p-4">
+            <h3 class="h5 fw-bold">Habilidades consultivas</h3>
+            <p class="mb-0">Comunicación ejecutiva, pensamiento analítico, storytelling, facilitación de talleres, orientación al cliente y resolución de problemas.</p>
+          </div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="formacion" class="container py-5">
+      <h2 class="section-title text-center mb-4">Formación</h2>
+      <div class="card card-clean">
+        <div class="card-body p-4">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <h3 class="h5 fw-bold">Ingeniería Comercial, mención Administración de Empresas</h3>
+              <p class="mb-0">Universidad Nacional Andrés Bello | 2011 – 2016</p>
+            </div>
+            <div class="col-md-6">
+              <h3 class="h5 fw-bold">Data Scientist</h3>
+              <p class="mb-0">Desafío Latam | 2023 – 2024</p>
+            </div>
+            <div class="col-md-6">
+              <h3 class="h5 fw-bold">Full Stack Developer</h3>
+              <p class="mb-0">Desafío Latam | 2024 – 2025</p>
+            </div>
+            <div class="col-md-6">
+              <h3 class="h5 fw-bold">Ingeniería de Datos e IA con GCP</h3>
+              <p class="mb-0">Smart Data | 2024 – 2025</p>
+            </div>
+            <div class="col-md-6">
+              <h3 class="h5 fw-bold">Inglés avanzado</h3>
+              <p class="mb-0">Instituto Chileno Norteamericano | 2005 – 2008</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certificaciones" class="container py-5">
+      <h2 class="section-title text-center mb-4">Certificaciones y especializaciones</h2>
+      <div class="card card-clean">
+        <div class="card-body p-4">
+          <div class="d-flex flex-wrap">
+            <span class="tag">Power BI</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Python</span>
+            <span class="tag">Data Scientist</span>
+            <span class="tag">Data Analyst</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Redes Neuronales</span>
+            <span class="tag">Scrum Master</span>
+            <span class="tag">Six Sigma</span>
+            <span class="tag">SAP FI</span>
+            <span class="tag">SAP PS</span>
+            <span class="tag">SAP MM</span>
+            <span class="tag">GCP Data & AI</span>
+            <span class="tag">AWS</span>
+            <span class="tag">n8n</span>
+            <span class="tag">Git & GitHub</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">React</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container py-5">
+      <div class="card card-clean">
+        <div class="card-body p-4 p-lg-5 text-center">
+          <h2 class="section-title mb-3">Perfil adaptable para postulaciones</h2>
+          <p class="mb-4">
+            Según la vacante, este perfil puede priorizar keywords de Consultor de Proyectos, Transformación Digital, Business Analyst, BI/Data Analyst, SAP/ERP o Automatización.
           </p>
+          <a href="mailto:ignacio.rlambert@gmail.com" class="btn btn-main btn-lg">Conversemos</a>
         </div>
       </div>
     </section>
-
-    <!--Formación Académica-->
-
-    <section id="education" class="my-5 d-flex justify-content-center">
-      <div class="card shadow-lg border-0 animate-on-scroll glow-card" style="width: 100%; max-width: 1000px;">
-        <div class="card-body">
-          <h3 class="card-title text-center mb-4">Formación Académica 🎓</h3>
-          <ul class="list-unstyled ps-3">
-            <li>
-              <strong>Universidad Nacional Andrés Bello</strong> (sep 2011 - jun 2016) Ingeniero Comercial con Mención en Administración
-            </li>
-            <li>
-              <strong>Desafío Latam</strong> (abr 2023 - may 2024) Data Analyst / Scientist
-            </li>
-            <li>
-              <strong>Desafío Latam</strong> (nov 2024 - ene 2026) Full Stack Developer
-            </li>
-            <li>
-              <strong>Smart Data</strong> (dic 2024 - mar 2025) Ingeniería de Datos e IA con GCP
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-
-  <section id="experience" class="my-5 d-flex flex-column align-items-center">
-    <h3 class="text-center mb-4">Experiencia Profesional 💼</h3>
-
-  <!-- Artículo: Consultor -->
-      <article class="card shadow-lg border-0 mb-4 animate-on-scroll glow-card" style="width: 100%; max-width: 1000px;">
-        <div class="card-body">
-          <h4 class="card-title">Consultor de Proyectos (Freelance) </h4>
-          <p><strong>Andes Motor</strong> (ene 2026 - presente)</p>
-          <p><strong>Abastible</strong> (nov 2025 - presente)</p>
-          <p><strong>Codelco</strong> (ene 2025 - dic 2025)</p>
-          <p><strong>Cintazul</strong> (feb 2025 - jul 2025)</p>
-          <ul>
-            <li>Diseño e implementación de estrategias para la optimización de procesos empresariales clave.</li>
-            <li>Elaboración de diagnósticos organizacionales para identificar oportunidades de mejora y riesgos potenciales.</li>
-            <li>Desarrollo de planes de transformación digital enfocados en la mejora continua.</li>
-            <li>Gestión integral de proyectos de consultoría, desde la planificación hasta la ejecución y evaluación de resultados.</li>
-            <li>Asesoría personalizada a clientes sobre mejores prácticas en gestión de proyectos y consultoría empresarial.</li>
-            <li>Supervisión y mentoría de equipos junior, garantizando el cumplimiento de estándares de calidad.</li>
-            <li>Análisis de mercado y benchmarking para proponer soluciones innovadoras adaptadas al entorno competitivo.</li>
-            <li>Diseño y desarrollo de capacitaciones y talleres para fortalecer las competencias del cliente.</li>
-            <li>Elaboración de informes estratégicos y presentaciones ejecutivas para la alta dirección.</li>
-            <li>Colaboración con stakeholders clave para la alineación de objetivos y entrega de resultados medibles.</li>
-          </ul>
-        </div>
-      </article>
-    
-      <!-- Artículo: MINVU -->
-      <article class="card shadow-lg border-0 mb-4 animate-on-scroll glow-card" style="width: 100%; max-width: 1000px;">
-        <div class="card-body">
-          <h4 class="card-title">Analista en Control de Gestión</h4>
-          <p><strong>Ministerio de Vivienda y Urbanismo</strong> (abr 2023 - dic 2023)</p>
-          <ul>
-            <li>Análisis de datos financieros de diversas fuentes para garantizar su exactitud y confiabilidad.</li>
-            <li>Interpretación de resultados financieros para identificar tendencias y áreas de mejora.</li>
-            <li>Desarrollo de informes financieros detallados para la alta dirección.</li>
-            <li>Creación de dashboards interactivos en Power BI para el monitoreo de KPI's ministeriales.</li>
-            <li>Implementación de procesos automatizados para la actualización regular de dashboards.</li>
-          </ul>
-        </div>
-      </article>
-    
-      <!-- Artículo: ProVida AFP -->
-      <article class="card shadow-lg border-0 mb-4 animate-on-scroll glow-card" style="width: 100%; max-width: 1000px;">
-        <div class="card-body">
-          <h4 class="card-title">Analista y Controlador Gerencial</h4>
-          <p><strong>ProVida AFP</strong> (mar 2018 - dic 2022)</p>
-          <ul>
-            <li>Extracción, transformación y carga de datos (ETL) utilizando SQL para análisis comerciales.</li>
-            <li>Desarrollo de dashboards en Power BI para la visualización de datos comerciales.</li>
-            <li>Análisis de grandes volúmenes de datos para identificar tendencias y oportunidades de mejora.</li>
-            <li>Fijación de metas comerciales y monitoreo continuo del progreso de ventas.</li>
-            <li>Preparación de informes detallados sobre el desempeño de ventas y propuestas de acciones correctivas.</li>
-          </ul>
-        </div>
-      </article>
-    
-      <!-- Artículo: Banco Estado -->
-      <article class="card shadow-lg border-0 mb-4 animate-on-scroll glow-card" style="width: 100%; max-width: 1000px;">
-        <div class="card-body">
-          <h4 class="card-title">Coordinador de Proyectos</h4>
-          <p><strong>Banco Estado</strong> (oct 2016 - mar 2018)</p>
-          <ul>
-            <li>Coordinación integral de proyectos desde la planificación hasta la ejecución y cierre.</li>
-            <li>Gestión de presupuestos, riesgos y cambios, asegurando el cumplimiento de los objetivos del proyecto.</li>
-            <li>Comunicación continua con stakeholders y elaboración de informes de progreso.</li>
-            <li>Implementación de sistemas de información para la toma de decisiones con enfoque en trazabilidad y eficiencia operativa.</li>
-            <li>Articulación de equipos multidisciplinarios en entornos ágiles, promoviendo la mejora continua y la transformación digital.</li>
-          </ul>
-        </div>
-      </article>
-    
-      <!-- Artículo: MT Solutión Center -->
-      <article class="card shadow-lg border-0 mb-4 animate-on-scroll glow-card" style="width: 100%; max-width: 1000px;">
-        <div class="card-body">
-          <h4 class="card-title">Key Account Manager</h4>
-          <p><strong>MT Solutión Center</strong> (mar 2014 - oct 2016)</p>
-          <ul>
-            <li>Asesoría experta en la implementación y optimización de soluciones SAP.</li>
-            <li>Desarrollo de estrategias de negocio y gestión de proyectos complejos de implementación SAP.</li>
-            <li>Gestión y ampliación de cartera de clientes.</li>
-            <li>Head hunting de Crowdsolvers SAP (Consultores Cross Módulo).</li>
-          </ul>
-        </div>
-      </article>
-  </section>
-
-
-  <section id="certifications" class="my-5">
-    <h3 class="text-center mb-4">Certificaciones</h3>
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 justify-content-center">
-
-    <!-- Certificado 0 -->
-    <div class="col">
-  <div class="flip-card card-animada">
-    <div class="flip-card-inner">
-      <div class="flip-card-front">
-        <div class="fondo-animado"></div>
-        <div class="contenido-front d-flex align-items-center justify-content-center h-100">
-          <h5 class="text-white text-center">Power BI</h5>
-        </div>
-      </div>
-      <div class="flip-card-back d-flex align-items-center justify-content-center">
-        <img src="./assets/imgs/Certificado_Power_BI.png" alt="Power BI" class="img-fluid rounded shadow">
-      </div>
-    </div>
-  </div>
-</div>
-    <!-- Certificado 1 -->
-    <div class="col" onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front d-flex align-items-center justify-content-center">
-            <h5 class="text-center">Análisis de Datos con Python</h5>
-          </div>
-          <div class="flip-card-back">
-            <img src="./assets/imgs/Certificado_Python_Analisis_de_datos.png" alt="Python">
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Certificado 2 -->
-    <div class="col" onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front d-flex align-items-center justify-content-center">
-            <h5 class="text-center">Análisis estadístico con Python</h5>
-          </div>
-          <div class="flip-card-back">
-            <img src="./assets/imgs/Certificado_Python_Analisis_estadístico.png" alt="Python">
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Certificado 3 -->
-    <div class="col" onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front d-flex align-items-center justify-content-center">
-            <h5 class="text-center">CSS Avanzado</h5>
-          </div>
-          <div class="flip-card-back">
-            <img src="./assets/imgs/Certificado_CSS_Avanzado.png" alt="CSS Avanzado">
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Certificado 4 -->
-    <div class="col" onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front d-flex align-items-center justify-content-center">
-            <h5 class="text-center">Introducción al desarrollo web</h5>
-          </div>
-          <div class="flip-card-back">
-            <img src="./assets/imgs/Certificado_Introducción_al_desarrollo_Web.png" alt="Web Intro">
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Certificado 5 -->
-    <div class="col" onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front d-flex align-items-center justify-content-center">
-            <h5 class="text-center">JavaScript para la web</h5>
-          </div>
-          <div class="flip-card-back">
-            <img src="./assets/imgs/Certificado_JavaScript_para_la_web.png" alt="JS Web">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Certificado 6 -->
-    <div class="col" onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
-      <div class="flip-card"><div class="flip-card-inner">
-        <div class="flip-card-front d-flex align-items-center justify-content-center">
-          <h5 class="text-center">SAP FI</h5>
-        </div>
-        <div class="flip-card-back"><img src="./assets/imgs/Certificado_SAP_FI.png" alt="SAP FI"></div>
-      </div></div>
-    </div>
-    <!-- Certificado 7 -->
-    <div class="col" onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
-      <div class="flip-card"><div class="flip-card-inner">
-        <div class="flip-card-front d-flex align-items-center justify-content-center">
-          <h5 class="text-center">SAP PS</h5>
-        </div>
-        <div class="flip-card-back"><img src="./assets/imgs/Certificado_SAP_PS.png" alt="SAP PS"></div>
-      </div></div>
-    </div>
-    <!-- Certificado 8 -->
-    <div class="col" onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
-      <div class="flip-card"><div class="flip-card-inner">
-        <div class="flip-card-front d-flex align-items-center justify-content-center">
-          <h5 class="text-center">SAP MM</h5>
-        </div>
-        <div class="flip-card-back"><img src="./assets/imgs/Certificado_SAP_MM.png" alt="SAP PS"></div>
-      </div></div>
-    </div>
-    <!-- Certificado 9 -->
-    <div class="col" onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
-      <div class="flip-card"><div class="flip-card-inner">
-        <div class="flip-card-front d-flex align-items-center justify-content-center">
-          <h5 class="text-center">Machine Learning</h5>
-        </div>
-        <div class="flip-card-back"><img src="./assets/imgs/Certificado_Machine_Learning.png" alt="ML"></div>
-      </div></div>
-    </div>
-    <!-- Certificado 10 -->
-    <div class="col" onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
-      <div class="flip-card"><div class="flip-card-inner">
-        <div class="flip-card-front d-flex align-items-center justify-content-center">
-          <h5 class="text-center">Postgre SQL</h5>
-        </div>
-        <div class="flip-card-back"><img src="./assets/imgs/Certificado_PostgreSQL.png" alt="ML"></div>
-      </div></div>
-    </div>
-    <!-- Certificado 11 -->
-    <div class="col" onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
-      <div class="flip-card"><div class="flip-card-inner">
-        <div class="flip-card-front d-flex align-items-center justify-content-center">
-          <h5 class="text-center">Redes Neuronales</h5>
-        </div>
-        <div class="flip-card-back"><img src="./assets/imgs/Certificado_Redes_Neuronales.png" alt="ML"></div>
-      </div></div>
-    </div>
-    <!-- Certificado 12 -->
-    <div class="col" onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
-      <div class="flip-card"><div class="flip-card-inner">
-        <div class="flip-card-front d-flex align-items-center justify-content-center">
-          <h5 class="text-center">GitHub</h5>
-        </div>
-        <div class="flip-card-back"><img src="./assets/imgs/Certificado_Git_y_Github.png" alt="ML"></div>
-      </div></div>
-    </div>
-    <!-- Certificado 13 -->
-    <div class="col" onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
-      <div class="flip-card"><div class="flip-card-inner">
-        <div class="flip-card-front d-flex align-items-center justify-content-center">
-          <h5 class="text-center">SQL Server</h5>
-        </div>
-        <div class="flip-card-back"><img src="./assets/imgs/Certificado_SQL_Server.png" alt="ML"></div>
-      </div></div>
-    </div>
-    <!-- Certificado 14 -->
-    <div class="col" onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
-      <div class="flip-card"><div class="flip-card-inner">
-        <div class="flip-card-front d-flex align-items-center justify-content-center">
-          <h5 class="text-center">Scrum Master</h5>
-        </div>
-        <div class="flip-card-back"><img src="./assets/imgs/Certificado_Scrum_master.png" alt="ML"></div>
-      </div></div>
-    </div>
-    <!-- Certificado 15 -->
-    <div class="col" onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
-      <div class="flip-card"><div class="flip-card-inner">
-        <div class="flip-card-front d-flex align-items-center justify-content-center">
-          <h5 class="text-center">Analista de datos con Python</h5>
-        </div>
-        <div class="flip-card-back"><img src="./assets/imgs/Certificado_de_Analista_de_Datos_con_Python.png" alt="ML"></div>
-      </div></div>
-    </div>
-    <!-- Certificado 16 -->
-    <div class="col" onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
-      <div class="flip-card"><div class="flip-card-inner">
-        <div class="flip-card-front d-flex align-items-center justify-content-center">
-          <h5 class="text-center">Científico de datos con Python </h5>
-        </div>
-        <div class="flip-card-back"><img src="./assets/imgs/Certificado_Ciencia_de_Datos.png" alt="ML"></div>
-      </div></div>
-    </div>
-    <!-- Certificado 17 -->
-    <div class="col" onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
-      <div class="flip-card"><div class="flip-card-inner">
-        <div class="flip-card-front d-flex align-items-center justify-content-center">
-          <h5 class="text-center">Ingeniería de datos e IA con GCP</h5>
-        </div>
-        <div class="flip-card-back"><img src="./assets/imgs/Ingeniería de datos e IA con GCP.jpg" alt="ML"></div>
-      </div></div>
-    </div> 
-    <!-- Certificado 18 -->
-    <div class="col" onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
-      <div class="flip-card"><div class="flip-card-inner">
-        <div class="flip-card-front d-flex align-items-center justify-content-center">
-          <h5 class="text-center">Ingeniería Comercial</h5>
-        </div>
-        <div class="flip-card-back"><img src="./assets/imgs/Certificado_Ciencia_de_Datos.png" alt="ML"></div>
-      </div></div>
-    </div>     
-
-    
-      </div>
-  </section>
-
-  <section id="habilidades" class="container my-5">
-    <h2 class="text-center mb-4">🛠️ Habilidades Técnicas</h2>
-
-  <div class="accordion" id="accordionHabilidades">
-    <!-- Análisis de Datos -->
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#analisisDatos">
-          📊 Análisis de Datos y Business Intelligence
-        </button>
-      </h2>
-      <div id="analisisDatos" class="accordion-collapse collapse" data-bs-parent="#accordionHabilidades">
-        <div class="accordion-body">
-          <ul>
-            <li>Análisis avanzado en Power BI: diseño de dashboards interactivos, indicadores clave de desempeño (KPIs), segmentaciones dinámicas y filtros personalizados.</li>
-            <li>Creación de modelos de datos optimizados mediante Power Query, relaciones, y medidas DAX personalizadas para análisis financiero y productivo.</li>
-            <li>Desarrollo de tableros comparativos real vs. planificado, simulaciones y trazabilidad de datos operacionales.</li>
-            <li>Integración de múltiples fuentes de datos: Excel, SQL Server, Google Sheets, APIs REST.</li>
-            <li>Excel avanzado: tablas dinámicas, fórmulas anidadas, validación de datos, modelamiento financiero y automatización con VBA.</li>
-            <li>Estadística aplicada: análisis descriptivo e inferencial, simulación de escenarios, regresiones y visualización de distribución de datos.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- Lenguajes -->
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#lenguajes">
-          💻 Lenguajes y Herramientas de Programación
-        </button>
-      </h2>
-      <div id="lenguajes" class="accordion-collapse collapse" data-bs-parent="#accordionHabilidades">
-        <div class="accordion-body">
-          <ul>
-            <li>Python (Pandas, Numpy, Flask, Keras, scikit-learn, TensorFlow, Statsmodels, Seaborn, Matplotlib, Plotly, SQLAlchemy )</li>
-            <li>JavaScript (DOM, APIs, Node.js, validaciones, etc)</li>
-            <li>React (Context API, rutas, consumo de APIs)</li>
-            <li>Full Stack con HTML, CSS (Bootstrap), JS y Flask o Node.js/PostgreSQL</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- Bases de Datos -->
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#basesDatos">
-          🗃️ Bases de Datos
-        </button>
-      </h2>
-      <div id="basesDatos" class="accordion-collapse collapse" data-bs-parent="#accordionHabilidades">
-        <div class="accordion-body">
-          <ul>
-            <li>SQL avanzado: consultas complejas, joins, CTEs, funciones de ventana básicas.</li>
-            <li>Diseño y modelamiento de datos: relacional y analítico (tablas bien estructuradas, claves, relaciones).</li>
-            <li>Optimización: índices, revisión de planes de ejecución, mejora de performance en consultas.</li>
-            <li>Procesos ETL: integración, limpieza y transformación de datos desde múltiples fuentes.</li>
-            <li>Administración básica a intermedia: usuarios, permisos, respaldos y recuperación.</li>
-            <li>Integración con herramientas de análisis (Power BI, Python/Pandas, etc.).</li>
-            <li>Trabajo con varias tecnologías: PostgreSQL, MySQL, SQL Server; experiencia con NoSQL (MongoDB).</li>
-            <li>Uso de servicios en la nube (ej. AWS / GCP) para despliegue y gestión de datos.</li>
-            <li>Buenas prácticas de calidad y trazabilidad de la información para soporte de decisiones.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- Consultoría -->
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#consultoria">
-          🧩 Consultoría y Gestión de Procesos
-        </button>
-      </h2>
-      <div id="consultoria" class="accordion-collapse collapse" data-bs-parent="#accordionHabilidades">
-        <div class="accordion-body">
-          <ul>   
-              <li>Propuestas de mejora basadas en análisis de datos, observación en terreno y entrevistas clave.</li>
-              <li>Modelamiento de procesos y estructuras organizacionales con enfoque en eficiencia y trazabilidad.</li>
-              <li>Coordinación de equipos multidisciplinarios para implementación de soluciones tecnológicas.</li>
-              <li>Desarrollo de presentaciones de alto impacto para directorios y alta gerencia.</li>
-              <li>Integración de herramientas tecnológicas (Dashboards de Power BI, Aplicaciónes a medida, Páginas Web, etc.) en proyectos de transformación digital.</li>
-          </ul>
-
-          </ul>
-
-        </div>
-      </div>
-    </div>
-
-
-    <!-- Web y DevOps -->
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#web">
-          🌐 Web y DevOps
-        </button>
-      </h2>
-      <div id="web" class="accordion-collapse collapse" data-bs-parent="#accordionHabilidades">
-        <div class="accordion-body">
-          <ul>
-              <li>Despliegue de sitios web estáticos y aplicaciones completas en AWS S3, con configuración de dominios personalizados mediante Route 53 y distribución segura con CloudFront.</li>
-              <li>Automatización de procesos con Python, incluyendo consumo e integración de APIs externas y almacenamiento en bases de datos.</li>
-              <li>Desarrollo de aplicaciones backend con Flask y bases de datos relacionales (PostgreSQL, SQLite), incluyendo lógica CRUD, autenticación de usuarios y exportación de datos.</li>
-              <li>Integración de herramientas como Excel y SharePoint en flujos automatizados para registro y procesamiento de información.</li>
-              <li>Control de versiones con Git y GitHub; despliegue de aplicaciones en Netlify y Render.</li>
-              <li>Conocimientos de frontend con HTML, CSS, JavaScript y React, incluyendo consumo de APIs, manejo de estado y UI responsiva.</li>
-          </ul>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- Chatbots -->
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#chatbot">
-          🤖 Automatización y Chatbots
-        </button>
-      </h2>
-      <div id="chatbot" class="accordion-collapse collapse" data-bs-parent="#accordionHabilidades">
-        <div class="accordion-body">
-          <ul>
-            <li>Desarrollo de Aplicaciones personalizadas, integradas a sitios web mediante JavaScript y Node.js.</li>
-            <li>Construcción de servidores backend con Express, gestión de rutas y consumo seguro de APIs externas.</li>
-            <li>Uso de dotenv para manejo seguro de claves API y variables de entorno en entornos de desarrollo y producción.</li>
-            <li>Configuración detallada de políticas CORS para asegurar la interoperabilidad entre dominios locales y personalizados (ej: www.enredchile.cl).</li>
-            <li>Despliegue de servidores Node.js en Render con manejo de rutas, puertos y entornos de ejecución.</li>
-            <li>Integración de frontend y backend para chatbots conversacionales funcionales y estilizados dentro de sitios corporativos.</li>
-          </ul>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <h2 class="text-center mt-5">🤝 HABILIDADES BLANDAS</h2>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">🧠 Pensamiento analítico y estratégico</li>
-    <li class="list-group-item">🗣️ Comunicación efectiva</li>
-    <li class="list-group-item">🤝 Trabajo en equipo</li>
-    <li class="list-group-item">🔄 Adaptabilidad al cambio</li>
-    <li class="list-group-item">🛠️ Resolución de problemas</li>
-    <li class="list-group-item">⏳ Gestión del tiempo</li>
-    <li class="list-group-item">📅 Gestión de proyectos</li>
-    <li class="list-group-item">🚀 Aprendizaje autónomo y adaptabilidad</li>
-    <li class="list-group-item">📖 Liderazgo Afiliativo</li>
-  </ul>
-</section>
-
-
-  <section id="languages" class="my-5 d-flex justify-content-center">
-    <div class="card shadow-lg border-0 animate-on-scroll glow-card" style="width: 100%; max-width: 800px;">
-      <div class="card-body">
-      <h3 class="card-title text-center mb-4">🌐 Idiomas</h3>
-      <ul class="list-unstyled text-center fs-5">
-        <li><strong>Español:</strong> Nativo 🇨🇱</li>
-        <li><strong>Inglés:</strong> Avanzado 🇺🇸</li>
-      </ul>
-      </div>
-    </div>
-  </section>
-
   </main>
 
-  <footer class="bg-primary text-white text-center py-3 mt-5">
-    <p class="mb-0">&copy; Todos los derechos reservados</p>
-  </footer>
-  <!-- Modal -->
-<div class="modal fade" id="certModal" tabindex="-1" aria-labelledby="certModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content bg-white">
-      <div class="modal-header">
-        <h5 class="modal-title" id="certModalLabel">Certificado</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body text-center">
-        <img id="modalCertImage" src="" alt="Certificado ampliado" class="img-fluid">
-      </div>
+  <footer class="text-center py-4">
+    <div class="container">
+      <p class="mb-1">&copy; 2026 Ignacio Andrés Lambert Ramírez</p>
+      <p class="small mb-0">Consultoría | Data & BI | Transformación Digital | Automatización</p>
     </div>
-  </div>
-</div>
-
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-  function openModal(event, imageUrl) {
-    event.stopPropagation(); // evita que también gire la tarjeta
-    const modalImage = document.getElementById('modalCertImage');
-    modalImage.src = imageUrl;
-    const modal = new bootstrap.Modal(document.getElementById('certModal'));
-    modal.show();
-  }
-</script>
-
-  <script src="index.js"></script>
 </body>
 </html>
-
-
