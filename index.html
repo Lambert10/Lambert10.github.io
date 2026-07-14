@@ -132,11 +132,147 @@
     }
 
     @media print {
-      .navbar, .btn, footer { display: none !important; }
-      .hero { background: #ffffff !important; color: #000000 !important; padding: 1rem 0; }
-      .hero .lead, .badge-skill { color: #000000 !important; }
-      .badge-skill { border: 1px solid #ccc; background: #fff; }
-      .card-clean { box-shadow: none; border: 1px solid #ccc; }
+      @page {
+        size: A4;
+        margin: 10mm;
+      }
+
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      body {
+        background: #ffffff !important;
+      }
+
+      .navbar, footer {
+        display: none !important;
+      }
+
+      .container {
+        max-width: 100% !important;
+      }
+
+      .hero {
+        background: linear-gradient(135deg, #0b2d4d 0%, #145c9e 100%) !important;
+        color: #ffffff !important;
+        padding: 1.4rem 0 !important;
+        min-height: 260mm;
+        display: flex !important;
+        align-items: center;
+        break-after: page;
+        page-break-after: always;
+      }
+
+      .hero .lead, .badge-skill {
+        color: #ffffff !important;
+      }
+
+      .badge-skill {
+        background: rgba(255, 255, 255, 0.14) !important;
+        border: 1px solid rgba(255, 255, 255, 0.4) !important;
+      }
+
+      section {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+      }
+
+      #perfil > .row {
+        display: block !important;
+        margin: 0 !important;
+      }
+
+      #perfil > .row > div {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin-bottom: 1rem !important;
+      }
+
+      #perfil .card-clean {
+        height: auto !important;
+      }
+
+      #habilidades, #formacion {
+        break-before: page;
+        page-break-before: always;
+      }
+
+      #habilidades > .row {
+        display: block !important;
+        margin: 0 !important;
+      }
+
+      #habilidades > .row > div {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin-bottom: .55rem !important;
+      }
+
+      #habilidades .card-body {
+        padding: .75rem 1rem !important;
+      }
+
+      #habilidades .card-title,
+      #habilidades h3 {
+        margin-bottom: .2rem !important;
+      }
+
+      #habilidades p {
+        margin-bottom: 0 !important;
+      }
+
+      main > section:last-child {
+        padding-top: .5rem !important;
+        padding-bottom: .5rem !important;
+      }
+
+      main > section:last-child .card-body {
+        padding: .55rem .8rem !important;
+      }
+
+      main > section:last-child h2 {
+        font-size: 1.2rem !important;
+        margin-bottom: .25rem !important;
+      }
+
+      main > section:last-child p {
+        font-size: .78rem !important;
+        margin-bottom: .35rem !important;
+      }
+
+      main > section:last-child .btn {
+        padding: .25rem .5rem !important;
+        font-size: .75rem !important;
+      }
+
+      .section-title {
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+
+      .card-clean {
+        box-shadow: none !important;
+        border: 1px solid #d7e2ec !important;
+      }
+
+      .card-clean, .highlight-box, article {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      .btn {
+        display: inline-block !important;
+        padding: .4rem .7rem !important;
+        font-size: .88rem !important;
+      }
+
+      a[href] {
+        text-decoration: none !important;
+      }
     }
   </style>
 </head>
@@ -155,7 +291,7 @@
           <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
           <li class="nav-item"><a class="nav-link" href="#formacion">Formación</a></li>
           <li class="nav-item"><a class="nav-link" href="#certificaciones">Certificaciones</a></li>
-          <li class="nav-item"><a class="nav-link" href="./portafolio.html" target="_blank">Portafolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://lambert10.github.io/portafolio.html" target="_blank" rel="noopener noreferrer">Portafolio</a></li>
         </ul>
       </div>
     </div>
@@ -187,7 +323,7 @@
             <a href="https://wa.me/56976231513?text=Hola%20Ignacio%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20contigo." target="_blank" rel="noopener noreferrer" class="btn btn-main btn-lg" aria-label="Contactar a Ignacio por WhatsApp"><i class="fa-brands fa-whatsapp"></i> Contactar</a>
             <a href="https://www.linkedin.com/in/ignacio-andr%C3%A9s-lambert-b0a96773/" target="_blank" class="btn btn-outline-light btn-lg"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
             <a href="https://github.com/Lambert10" target="_blank" class="btn btn-outline-light btn-lg"><i class="fa-brands fa-github"></i> GitHub</a>
-            <a href="./portafolio.html" target="_blank" class="btn btn-outline-light btn-lg"><i class="fa-solid fa-folder-open"></i> Portafolio</a>
+            <a href="https://lambert10.github.io/portafolio.html" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-lg"><i class="fa-solid fa-folder-open"></i> Portafolio</a>
           </div>
         </div>
       </div>
